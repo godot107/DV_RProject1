@@ -29,16 +29,14 @@ df <- data.frame(eval(parse(text=substring(getURL(URLencode('http://129.152.144.
 df
 
 #plot 1
-#g <- ggplot(df, aes(x = "as.Date(ORDER_DATE, \"%Y-%m-%d\""), y = ("as.Date(SHIPPED_DATE, \"%Y-%m-%d\""), color = "as.factor(UNIT_PRICE)") +  geom_point(aes(color = "as.factor(UNIT_PRICE)"))
 
-g <- ggplot(df, aes(x = as.Date(ORDER_DATE, '%Y-%m-%d'), y = (as.Date(SHIPPED_DATE, '%Y-%m-%d')))) + geom_point()
+#g <- ggplot(df, aes(x = as.Date(ORDER_DATE, '%Y-%m-%d'), y = (as.Date(SHIPPED_DATE, '%Y-%m-%d')))) + geom_point()
 
 g <- ggplot(df, aes(x = as.Date(ORDER_DATE, '%Y-%m-%d'), y = (as.Date(SHIPPED_DATE, '%Y-%m-%d')))) + geom_point(aes(color = as.factor(UNIT_PRICE))) + facet_wrap(~CUSTOMER_STATE)
-g
+
 
 #plot 2
-g <- ggplot(df, aes(x = "as.Date(ORDER_DATE, \"%Y-%m-%d\""), y = ("as.Date(SHIPPED_DATE, \"%Y-%m-%d\""), color = "as.factor(TITLE)") + geom_line()
-
+g <- ggplot(df, aes(x = as.Date(ORDER_DATE, '%Y-%m-%d'), y = (as.Date(SHIPPED_DATE, '%Y-%m-%d')))) + geom_point(aes(color = as.factor(TITLE))) + facet_wrap(~CUSTOMER_STATE)
 
 #plot 3
-g <- ggplot(df, aes(x = "as.Date(ORDER_DATE, \"%Y-%m-%d\""), y = ("as.Date(SHIPPED_DATE, \"%Y-%m-%d\""), color = "as.factor(ARTIST)")
+g <- ggplot(df, aes(x = as.Date(ORDER_DATE, '%Y-%m-%d'), y = (as.Date(SHIPPED_DATE, '%Y-%m-%d')))) + geom_point(aes(color = as.factor(ARTIST))) + facet_wrap(~CUSTOMER_STATE)
