@@ -33,8 +33,8 @@ df
 
 g <- ggplot(df, aes(x = as.Date(ORDER_DATE, '%Y-%m-%d'), y = (as.Date(SHIPPED_DATE, '%Y-%m-%d')))) + geom_point()
 
-g <- ggplot(df, aes(x = as.Date(ORDER_DATE, '%Y-%m-%d'), y = (as.Date(SHIPPED_DATE, '%Y-%m-%d')))) + geom_point(aes(color = as.factor(UNIT_PRICE)) + facet_wrap(~color)
-
+g <- ggplot(df, aes(x = as.Date(ORDER_DATE, '%Y-%m-%d'), y = (as.Date(SHIPPED_DATE, '%Y-%m-%d')))) + geom_point(aes(color = as.factor(UNIT_PRICE))) + facet_wrap(~CUSTOMER_STATE)
+g
 
 #plot 2
 g <- ggplot(df, aes(x = "as.Date(ORDER_DATE, \"%Y-%m-%d\""), y = ("as.Date(SHIPPED_DATE, \"%Y-%m-%d\""), color = "as.factor(TITLE)") + geom_line()
