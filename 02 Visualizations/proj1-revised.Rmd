@@ -1,0 +1,21 @@
+---
+title: "project1"
+output: html_document
+---
+
+Willie Man, Leon Rodriguez, Lauren Wendler
+
+
+*Interesting Plots*  
+Plots are shown by building the dataframes items, customers, orders, and order_details. 
+
+```{r}
+source("../01 Data/interestingplot.R", echo = TRUE)
+```
+
+
+*Step10* 
+dataframe is formed by joining the orders and customers table and a plots are made similiar to the requirements page.
+```{r}
+source("../01 Data/step10.R", echo = TRUE)
+```
